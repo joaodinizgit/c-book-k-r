@@ -1,0 +1,23 @@
+#+TITLE: Exercises from The C Programming Language Book 2nd Ed
+#+AUTHOR: João Diniz
+#+EMAIL: joaodiniz@msn.com
+
+Exercises from The C Programming Language Book 2 Edition
+Brian W. Kerninghan and Dennis M. Ritchie
+
+#+NAME: Exercises
+|----------+-------------------|
+| Exercise |              File |
+|----------+-------------------|
+|      1.9 |   [[file:remove-blanks.c][remove-blanks.c]] |
+|     1.10 |        [[file:replacer.c][replacer.c]] |
+|     1.11 |    [[file:word-counter.c][word-counter.c]] |
+|     1.12 |   [[file:word-per-line.c][word-per-line.c]] |
+|      1.6 |          [[file:arrays.c][arrays.c]] |
+|     1-13 |    [[file:length-words.c][length-words.c]] |
+|     1-14 |       [[file:freq-char.c][freq-char.c]] |
+|     1-15 |       [[file:temp-conv.c][temp-conv.c]] |
+|     1-16 |    [[file:longest-line.c][longest-line.c]] |
+|     1-17 |     [[file:input-lines.c][input-lines.c]] |
+|     1-18 | [[file:trainling-blanks.c][trailing-blanks.c]] |
+
