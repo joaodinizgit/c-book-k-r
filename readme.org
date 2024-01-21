@@ -20,4 +20,5 @@ Brian W. Kerninghan and Dennis M. Ritchie
 |     1-16 | [[file:longest-line.c][longest-line.c]]    |
 |     1-17 | [[file:input-lines.c][input-lines.c]]     |
 |     1-18 | [[file:trailing-blanks.c][trailing-blanks.c]] |
+|     1-19 | [[file:reverse.c][reverse.c]]         |
 
