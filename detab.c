@@ -5,59 +5,26 @@
 
 #include <stdio.h>
 
-#define MAXCHAR 1000
-#define TAB 4
-
-int getln(char s[], int lim);
-void t(char from[], char to[], int t);
+#define TAB 8
 
 int main(void)
 {
-    int len;
-    char line[MAXCHAR];
-    char b[MAXCHAR];
+    int i, c, p;
+    p = 0;
 
-    while ((len = getln(line, MAXCHAR)) > 0) {
-        t(line, b, TAB);
-        printf("%s", b);
-    }
-}
-
-int getln(char s[], int lim)
-{
-    int c, i, j;
-    j = 0;
-    for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i) {
-        if (i < lim -1) {
-	    s[j] = c;
-	    ++j;
-	}
-    }
-    if (c == '\n' && j < lim - 1) {
-        s[j] = c;
-	s[j+1] = '\0';
-	++i;
-    } else if (c == '\n') {
-	s[j+1] = '\0';
-	++i;
-    }
-    return i;
-}
-
-void t(char from[], char to[], int t)
-{
-    int i, j, k;
-    k = 0;
-    for (i = 0; from[i] != '\0'; ++i) {
-        if (from[i] == '\t') {
-            for (j = 0; j < t; ++j) {
-                to[k] = ' ';
-                ++k;
-            }
+    while ((c = getchar()) != EOF) {
+        if (c == '\t') {
+            for (i = 0; i < TAB - p; ++i)
+                putchar(' ');
+            p = 0;
+        } else if (c == '\n') {
+            putchar(c);
+            p = 0;
         } else {
-            to[k] = from[i];
-            ++k;
+            putchar(c);
+            ++p;
         }
+        if (p >= TAB)
+            p = 0;
     }
-    to[k] = '\0';
 }
