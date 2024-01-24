@@ -36,7 +36,7 @@ int main(void)
 	if (words[i] > 0) {
 	    printf("%3d ", words[i]);
 	    for (int j = 0; j < words[i]; j++)
-		printf("_");
+		printf("|");
 	    printf("\n");
 	}
     }
