@@ -1,3 +1,4 @@
+
 #+TITLE: Exercises from The C Programming Language Book 2nd Ed
 #+AUTHOR: João Diniz
 #+EMAIL: joaodiniz@msn.com
@@ -22,4 +23,5 @@ Brian W. Kerninghan and Dennis M. Ritchie
 |     1-18 | [[file:trailing-blanks.c][trailing-blanks.c]] |
 |     1-19 | [[file:reverse.c][reverse.c]]         |
 |     1-20 | [[file:detab.c][detab.c]]           |
+|     1-21 | [[file:entab.c][entab.c]]           |
 
