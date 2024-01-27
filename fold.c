@@ -26,8 +26,8 @@ int main(void)
 
 int getln(char m[][C], int lim)     // fold elements
 {
-    int c, i, j, k, x, y, b ;
-    j = k = b = 0;
+    int c, i, j, k, x, y;
+    j = k = 0;
 
     for (x = 0; x < L; ++x){        // clean matrix
         for (y = 0; y < lim; ++y) {
@@ -36,7 +36,7 @@ int getln(char m[][C], int lim)     // fold elements
     }
 
     for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i) {     // start to fold
-        if (k < lim - 2 && j < L && b == 0) {
+        if (k < lim - 2 && j < L) {
             m[j][k] = c;
             ++k;
         } else if (c != ' ' && c != '\t' && j < L) {     // only non-blank
@@ -58,9 +58,3 @@ int getln(char m[][C], int lim)     // fold elements
     }
     return i;
 }
-
-
-
-
-
-

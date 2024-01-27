@@ -24,4 +24,5 @@ Brian W. Kerninghan and Dennis M. Ritchie
 |     1-19 | [[file:reverse.c][reverse.c]]         |
 |     1-20 | [[file:detab.c][detab.c]]           |
 |     1-21 | [[file:entab.c][entab.c]]           |
+|     1-22 | [[file:fold.c][fold.c]]            |
 
