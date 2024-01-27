@@ -7,8 +7,8 @@ epecified column.*/
 
 #include <stdio.h>
 
-#define C 12
-#define L 3
+#define C 7  // number of columns(with '\0')
+#define L 3  // three folds
 
 int getln(char m[][C], int lim);
 
@@ -16,33 +16,30 @@ int main(void)
 {
     char matrix[L][C];
     int i, j, len;
-    len = 0;
 
     while ((len = getln(matrix, C)) > 0) {
         for (j = 0; j < L; ++j) {
             printf("FOLD %d: [%s]\n", j, matrix[j]);
         }
-
     }
 }
 
-// Fold the first 11 + '\0' characters in matrix
-int getln(char m[][C], int lim)
+int getln(char m[][C], int lim)     // fold elements
 {
-    int c, i, j, k, x, y ;
-    j = k = 0;
+    int c, i, j, k, x, y, b ;
+    j = k = b = 0;
 
-    for (x = 0; x < L; ++x){    
+    for (x = 0; x < L; ++x){        // clean matrix
         for (y = 0; y < lim; ++y) {
-            m[x][y] = '\0';             // Clean the matrix
+            m[x][y] = '\0';
         }
     }
 
-    for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i) {
-        if (k < lim - 2 && j < L) {
+    for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i) {     // start to fold
+        if (k < lim - 2 && j < L && b == 0) {
             m[j][k] = c;
             ++k;
-        } else if (k == lim -2 && c != ' ' && c != '\t' && j < L) {     // only non-blank
+        } else if (c != ' ' && c != '\t' && j < L) {     // only non-blank
             m[j][k] = c;
             ++k;
             m[j][k] = '\0';
@@ -59,9 +56,10 @@ int getln(char m[][C], int lim)
         m[j][k] = '\0';
         ++i;
     }
-
     return i;
 }
+
+
 
 
 
